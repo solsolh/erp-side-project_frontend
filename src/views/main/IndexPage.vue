@@ -17,7 +17,7 @@
 
       <!-- mainSection 시작-->
       <div id="mainSection">
-<!--         header-->
+    <!-- header-->
         <div class="header">
           <div class="header-wrap">
             <h2 class="header-title">Calendar</h2>

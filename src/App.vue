@@ -1,5 +1,6 @@
 <template>
   <router-view/>
+  <router-link to="index">index<router-link/>
 </template>
 
 <style>
