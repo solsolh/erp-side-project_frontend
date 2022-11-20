@@ -534,7 +534,7 @@ input {
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
-    /*background: url('/close.png') no-repeat center/cover;*/
+    background: url(/src/assets/image/close.png) no-repeat center/cover;
     border: none;
     z-index: 100;
     cursor: pointer;
@@ -661,7 +661,7 @@ input {
     right: 0;
     width: 20px;
     height: 20px;
-    /*background: url(/img/close.png) no-repeat center/cover;*/
+    background: url(/src/assets/image/close.png) no-repeat center/cover;
     border: none;
     z-index: 100;
     cursor: pointer;
@@ -803,7 +803,7 @@ input {
     right: 0;
     width: 20px;
     height: 20px;
-    /*background: url(/img/close.png) no-repeat center/cover;*/
+    background: url(/src/assets/image/close.png) no-repeat center/cover;
     border: none;
     z-index: 100;
     cursor: pointer;
@@ -868,7 +868,7 @@ input {
     right: 0;
     width: 20px;
     height: 20px;
-    /*background: url(/img/close.png) no-repeat center/cover;*/
+    background: url(/src/assets/image/close.png) no-repeat center/cover;
     border: none;
     z-index: 100;
     cursor: pointer;
@@ -1183,7 +1183,7 @@ input {
 .box-close {
     width: 20px;
     height: 20px;
-    /*background: url(/img/close.png) no-repeat center/cover;*/
+    background: url(/src/assets/image/close.png) no-repeat center/cover;
     border: none;
     z-index: 100;
     cursor: pointer;
@@ -1274,7 +1274,7 @@ input {
     right: 0;
     width: 20px;
     height: 20px;
-    /*background: url(/img/close.png) no-repeat center/cover;*/
+    background: url(/src/assets/image/close.png) no-repeat center/cover;
     border: none;
     z-index: 100;
     cursor: pointer;
@@ -1531,7 +1531,7 @@ input {
 .box-close {
     width: 20px;
     height: 20px;
-    /*background: url(/img/close.png) no-repeat center/cover;*/
+    background: url(/src/assets/image/close.png) no-repeat center/cover;
     border: none;
     z-index: 100;
     cursor: pointer;
@@ -1658,7 +1658,7 @@ table td {
     right: 0;
     width: 20px;
     height: 20px;
-    /*background: url(/img/close.png) no-repeat center/cover;*/
+    background: url(/src/assets/image/close.png) no-repeat center/cover;
     border: none;
     z-index: 100;
     cursor: pointer;
