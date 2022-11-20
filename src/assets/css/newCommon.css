@@ -148,17 +148,19 @@ input {
     align-items: center;
 }
 .main-cont .main-team .team-cont .team-slide {
-    width: 170px;
+    align-content: center;
+    width: 175px;
     height:180px;
     border-radius: 25px;
     text-align: center;
-    background: rgb(207, 207, 207);
+    background: #efefef;
 }
 
 
 /*mainSection-maincalender*/
 .main-title {
     font-weight: 600;
+    text-align: left;
 }
 .main-cont .main-calender{
     /* border: 1px solid red; */
@@ -169,7 +171,6 @@ input {
     /* width: 1200px; */
     height: 460px;
     margin: 20px auto;
-    border: 1px solid olive;
     text-align: center;
 }
 
@@ -532,7 +533,8 @@ input {
     right: 0;
     width: 20px;
     height: 20px;
-    /*background: url(/img/close.png) no-repeat center/cover;*/
+    background-repeat: no-repeat;
+    /*background: url('/close.png') no-repeat center/cover;*/
     border: none;
     z-index: 100;
     cursor: pointer;
@@ -1732,4 +1734,10 @@ table td {
     border: 1px solid rgb(210,210,210);
     margin-left: 10px;
     background-color: #fff;
+}
+
+/*fullcalender*/
+
+.fc-direction-ltr {
+    height: 460px;
 }

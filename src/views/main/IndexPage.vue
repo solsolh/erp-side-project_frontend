@@ -1,83 +1,80 @@
 <template>
-  <div id="wrap">
-    <!-- mainWrap 시작 -->
-    <div id="mainWrap" class="inner">
-<!--       leftSection 시작-->
-      <div id="leftSection">
-        <div class="logo">
-          <h1 class="logo-title"><a href="javascript:">DAY</a></h1>
-          <p class="logo-text">Schedule Management</p>
-        </div>
-        <div class="gnb"><ul class="nav">
-          <li><router-link to="/calender">Calendar</router-link></li>
-          <li><router-link to="/profile">Project2</router-link></li>
-        </ul></div>
-      </div>
-      <!-- leftSection 끝 -->
-
-      <!-- mainSection 시작-->
-      <div id="mainSection">
-    <!-- header-->
-        <div class="header">
-          <div class="header-wrap">
-            <h2 class="header-title">Calendar</h2>
-            <span class="d-day">D-365</span>
-            <div class="user">
-              <div class="profile">
-                                <span class="img-profile">
-                                    <img src="" alt="">
-                                </span>
-                <div class="btn-user">
-                  <button type="button" class="user-name" @mouseover="dropDown = true" >홍길동길동</button>
-                  <ul class="user-dropDown" v-if="dropDown == true" @mouseleave="dropDown = false">
-                    <li><a href="javascript:">개인정보수정</a></li>
-                    <li><a href="javascript:">로그아웃</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- mainCont -->
         <div class="main-cont">
           <div class="main-team">
             <h3 class="main-title">Team</h3>
             <div class="team-cont">
               <div class="slide-wrap">
-                <div class="team-slide"></div>
-                <div class="team-slide"></div>
-                <div class="team-slide"></div>
-                <div class="team-slide"></div>
-                <div class="team-slide"></div>
+                <vueper-slides class="no-shadow" style="width: 1250px;" :visible-slides="5" slide-multiple :gap="7" :slide-ratio="1 / 7" :dragging-distance="200" :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }">
+                  <vueper-slide v-for="i in 10" :key="i" :title="i.toString()" >
+                  <template v-slot:content>
+                    <div class="team-slide" @click="$router.push('/team')">
+                    <div class="team-img"><span></span></div>
+                      <div class="team-mem"><p>Kim Us er</p></div>
+                      <div class="team-job"><p>개발</p></div>
+                  </div></template>
+                    </vueper-slide>
+                </vueper-slides>
               </div>
             </div>
           </div>
           <div class="main-calender">
             <h3 class="main-title">My calender</h3>
             <div class="calender-cont">
-              캘린더영역
+              <FullCalendar :options="calendarOptions" />
             </div>
           </div>
         </div>
-      </div>
-      <!-- mainSection 끝-->
 
-    </div>
-    <!-- mainwrap 끝 -->
-  </div>
 </template>
 
 <script>
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
+import '@fullcalendar/core/vdom' // solves problem with Vite
+import FullCalendar from '@fullcalendar/vue3'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import interactionPlugin from '@fullcalendar/interaction'
+
+
 export default {
   name: "IndexPage",
-  data() {
-    return {
-      dropDown: false,
-    }
-  }
+  data: () => ({
+    dropDown: false,
+    pauseOnHover: true,
+    autoPlaying: true,
+    internalAutoPlaying: true,
+    slides: [
+      {
+        id: 'slide-1',
+        title: 'Slide <b style="font-size: 1.3em;color: yellow">#1</b>',
+        content: 'Slide title can be HTML.<br>And so does the slide content, <span style="font-size: 1.2em;color: yellow">why not?</span>'
+      },
+    ],
+    calendarOptions: {
+      plugins: [dayGridPlugin, interactionPlugin],
+      initialView: 'dayGridMonth'
+    },
+  }),
+  components: {VueperSlides, VueperSlide, FullCalendar},
 }
 </script>
 
-<style scoped>
 
+
+<style scoped>
+.team-img {
+  border-radius: 50px;
+  background-color: #cccccc;
+  width: 70px;
+  height: 70px;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 20px 0;
+}
+.team-job {
+  color: #5794ff;
+  font-width: bold;
+  font-size: 16px;
+}
 </style>
+

@@ -1,10 +1,12 @@
 <template>
-  <div id="mainWrap" class="inner">
-    <Left></Left>
-    <section id="mainSection">
-      <Header></Header>
-      <router-view></router-view>
-    </section>
+  <div id="wrap">
+    <div id="mainWrap" class="inner">
+      <Left/>
+      <div id="mainSection">
+        <Header/>
+        <router-view/>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -17,7 +19,7 @@ export default {
   name: "DefaultLayout",
   components: {
     Left,
-    Header
+    Header,
   },
   data: function () {
     return {

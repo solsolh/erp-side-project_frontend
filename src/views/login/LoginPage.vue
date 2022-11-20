@@ -16,7 +16,7 @@
                 <label class="checkbox"><input type="checkbox" id="checkArea">
                   <span>아이디저장</span></label>
               </div>
-              <button type="button" class="loginBtn" @click="index">로그인</button>
+              <button type="button" class="loginBtn" @click="$router.push('/index')">로그인</button>
             </div>
           </div>
         </div>

@@ -1,7 +1,19 @@
 <template>
-  <router-view/>
-  <router-link to="index">index<router-link/>
+    <router-view/>
 </template>
+
+<script>
+
+export default {
+name: 'App',
+data(){
+return{
+}
+},
+components: {
+}
+}
+</script>
 
 <style>
 #app {
