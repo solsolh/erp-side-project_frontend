@@ -1,4 +1,4 @@
-# erp-side-project_1
+# erp-side-project-frontend
 
 ## Project setup
 ```
