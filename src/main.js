@@ -3,4 +3,5 @@ import App from './App.vue'
 import router from './router'
 import mixins from "@/assets/mixins";
 
+
 createApp(App).use(router).mixin(mixins).mount('#app');
