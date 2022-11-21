@@ -3,7 +3,8 @@
     <div class="black-bg"></div>
     <!-- mainWrap 시작 -->
     <div id="mainWrap" class="inner">
-
+      <div id="mainSection">
+      </div>
     </div>
     <!-- mainSection 끝-->
 
@@ -73,8 +74,8 @@
           </div>
 
         </div>
-        <button type="button" class="pop-close">
-          <span class="blind" >닫기</span></button>
+        <button type="button" class="pop-close" @click="$router.push('/index')">
+          <span class="blind">닫기</span></button>
         <button class="add-btn">+</button>
       </div>
     </div>

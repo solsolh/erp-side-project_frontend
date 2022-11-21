@@ -8,7 +8,7 @@
                   <vueper-slide v-for="i in 10" :key="i" :title="i.toString()" >
                   <template v-slot:content>
                     <div class="team-slide" @click="$router.push('/team')">
-                    <div class="team-img"><span></span></div>
+                    <div class="team-img"><span :style="{backgroundImage:`url(${imgdata.userImage})`}"></span></div>
                       <div class="team-mem"><p>Kim Us er</p></div>
                       <div class="team-job"><p>개발</p></div>
                   </div></template>
@@ -20,8 +20,8 @@
           <div class="main-calender">
             <h3 class="main-title">My calender</h3>
             <div class="calender-cont">
-              <FullCalendar :options="calendarOptions" />
-            </div>
+            <FullCalendar :options="calendarOptions" />
+          </div>
           </div>
         </div>
 
@@ -34,11 +34,13 @@ import '@fullcalendar/core/vdom' // solves problem with Vite
 import FullCalendar from '@fullcalendar/vue3'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import interactionPlugin from '@fullcalendar/interaction'
+import imgdata from "@/assets/imgdata";
 
 
 export default {
   name: "IndexPage",
   data: () => ({
+    imgdata : imgdata,
     dropDown: false,
     pauseOnHover: true,
     autoPlaying: true,

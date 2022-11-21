@@ -29,14 +29,17 @@
 
 export default {
   name: "LoginPage",
-//   methods : index(){
+
+
+//   methods: index()
+// {
 // // object
-//   this.$router.push({ path: 'index' })
+//   this.$router.push({path: 'index'})
 // // 이름을 가지는 라우트
-//   router.push({ name: 'user', params: { userId: 123 }})
+//   router.push({name: 'user', params: {userId: 123}})
 // // 쿼리와 함께 사용, 결과는 /register?plan=private
-//   router.push({ path: 'register', query: { plan: 'private' }})
-// };
+//   router.push({path: 'register', query: {plan: 'private'}})
+// },
 }
 </script>
 

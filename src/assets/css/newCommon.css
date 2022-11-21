@@ -401,11 +401,10 @@ input {
 }
 .main-cont .cal-box .cal-cont {
     position: relative;
-    background-color: aliceblue;
     border-radius: 20px;
     text-align: center;
     /* width: 1200px; */
-    height: 90%;
+    height: 100%;
     margin: 0 auto;
 }
 #wrap #mainWrap #mainSection .main-cont {
@@ -897,6 +896,9 @@ input {
 
 
 /*backBtn */
+.btn-area {
+    display: flex;
+}
 .back-btn {
     position: relative;
     background-color: #fff;
@@ -905,6 +907,7 @@ input {
     margin-left: 10px;
     transition: all .3s;
     cursor: pointer;
+
 }
 .back-btn:before {
     content: "";
@@ -1014,8 +1017,8 @@ input {
 #ddayModal {
     z-index: 999;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 45%;
     transform: translate(-50%,-50%);
     width: 880px;
     height: 600px;
@@ -1335,8 +1338,8 @@ input {
 #ddayModal {
     z-index: 999;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 45%;
     transform: translate(-50%,-50%);
     width: 880px;
     height: 600px;
@@ -1596,12 +1599,16 @@ table td {
     width: 200px;
     height: 30px;
     border: 1px solid rgb(189, 189, 189);
+    margin-right: 300px;
 }
 .input-img {
     display: block;
     width: 200px;
     height: 30px;
     border: 1px solid rgb(189, 189, 189);
+}
+.uni {
+    margin-right: 350px;
 }
 .img-upload {
 }
@@ -1738,6 +1745,13 @@ table td {
 
 /*fullcalender*/
 
-.fc-direction-ltr {
+.calender-cont .fc-direction-ltr {
     height: 460px;
+}
+.cal-cont .fc-direction-ltr {
+    width: 100%;
+    height: 650px;
+}
+.cal-cont .fc-daygrid-day-frame {
+    height: 90px;
 }
